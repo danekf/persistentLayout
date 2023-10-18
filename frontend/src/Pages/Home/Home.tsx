@@ -5,8 +5,8 @@ import './Home.css';
 const Home: React.FC<{}> = () => {
 
   return (
-    <div className="fullPage">
-      <div className="hello">Hello Banner</div>
+    <div className="banner home">
+      <div className="hello">Home Banner</div>
     </div>
   )
 };

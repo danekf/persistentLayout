@@ -26,8 +26,8 @@ const SelectionPage: React.FC<{}> = () => {
 
   return (
     <>
-      <MenuBar layouts={layouts}/>
-      <Home />
+      <MenuBar layouts={layouts}/> 
+      {activeLayout === 'home' ? <Home /> : null}
       <LayoutsList layouts={layouts} activeLayout={activeLayout}/>
     </>
   )

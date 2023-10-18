@@ -20,7 +20,7 @@ const MenuBar: React.FC<MenuProps> = ({layouts}) => {
 
   menuItems.push({
     link: '/add',
-    name: '+Add New Layout'
+    name: 'Add New Layout'
   })
 
 

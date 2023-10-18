@@ -12,13 +12,17 @@ function App() {
       <Routes>
         {/* Regular Routes */}
         <Route path='/layout/:activeLayout' element={<SelectionPage />} />
-        <Route path='/add' element={<SelectionPage />} />
+        <Route path='/add' element={
+          <div className='addNew'>Add new page goes here...eventually. <br/><a href='/'>Go Home</a></div>
+        } />
 
 
         {/* Redirects */}
         <Route path='/' element={<Navigate to='/layout/home' />} />
+        <Route path='/layout/' element={<Navigate to='/layout/home' />} />
+        
         <Route path='*' element={
-          <div className='error'>Page not found</div>
+          <div className='error'>Page not found <br/><a href='/'>Go Home</a></div>
         }/>
 
 
