@@ -5,15 +5,14 @@ const MenuBar: React.FC<{}> = () => {
 
 
   const menuItems = [
-    {link : '/', name: 'Home'},
-    {link: '#Layouts', name: 'Layouts'},
+    {link : '/layout/home', name: 'Home'},
+    {link : '/layout/twitch', name: 'Twitch'},
+    {link : '/add/', name: 'Add New'},
+
+
   ]
 
-  const BurgerItems = [
-    {},
-    {},
-    {},
-  ]
+
 
 
 
