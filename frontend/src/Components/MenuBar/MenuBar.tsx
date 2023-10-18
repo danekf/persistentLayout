@@ -1,20 +1,27 @@
 import React from "react";
 import './MenuBar.css';
 
-const MenuBar: React.FC<{}> = () => {
+import { type TLayout } from "../../Types/customTypes.types";
 
+type MenuProps = {
+  layouts: TLayout[];
+}
 
-  const menuItems = [
-    {link : '/layout/home', name: 'Home'},
-    {link : '/layout/twitch', name: 'Twitch'},
-    {link : '/add/', name: 'Add New'},
+const MenuBar: React.FC<MenuProps> = ({layouts}) => {
 
+  const menuItems = layouts.map( (layout) => {
+    return (
+      {
+        link: `/layout/${layout.URLParam}`,
+        name: layout.name,
+      }
+    )
+  });
 
-  ]
-
-
-
-
+  menuItems.push({
+    link: '/add',
+    name: '+Add New Layout'
+  })
 
 
   return (
@@ -25,11 +32,6 @@ const MenuBar: React.FC<{}> = () => {
           <a href= {item.link}>{item.name}</a> 
         )
       })}
-
-      {/* Burger Menu */}
-      {/* insert here */}
-
-
     </div>
   )
 }

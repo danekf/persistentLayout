@@ -1,15 +1,13 @@
 import React, {useState} from "react";
 import './Layout.css';
+import { type TLayout } from "../../../Types/customTypes.types";
 
-type Layout = {
-  name: string;
-}
 
 type LayoutProps = {
-  layout: Layout;
+  layout: TLayout;
 }
 
-const Banner: React.FC<LayoutProps> = ({layout}) => {
+const Banner: React.FC<LayoutProps> = ({layout }) => {
 
   return(
     <div className="banner full">

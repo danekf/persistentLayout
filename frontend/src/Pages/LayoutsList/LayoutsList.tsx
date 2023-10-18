@@ -2,20 +2,22 @@ import React, {useState} from "react";
 import Layout from './Layout/Layout';
 import './LayoutList.css';
 
+import {type TLayout} from "../../Types/customTypes.types";
 
-const LayoutsList: React.FC<{}> = () => {
+type layoutProps = {
+  layouts: TLayout[];
+  activeLayout: string;  
+}
 
-  const layouts = [
-    {name: 'Twitch'},
-    {name: 'Gaming on TV (Dark Mode)'},
-    {name: 'LCS on the side'},
-  ]
 
+const LayoutsList: React.FC<layoutProps> = ({layouts, activeLayout}) => {
+  
   return (
     <div className="Layouts" id="Layouts">
       {layouts.map( (layout) => {
+        if (activeLayout.toLowerCase() === layout.URLParam.toLowerCase())
         return (
-          <Layout layout={layout} key={layout.name}/>
+          <Layout layout={layout} />
         )
       })}
     </div>
