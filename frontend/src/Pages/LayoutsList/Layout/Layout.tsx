@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './Layout.css';
 
 type Layout = {
@@ -12,8 +12,10 @@ type LayoutProps = {
 const Banner: React.FC<LayoutProps> = ({layout}) => {
 
   return(
-    <div className="banner">
-      {layout.name}
+    <div className="banner full">
+      <div className="inside">
+        {layout.name}
+      </div>
     </div>
   )
 }
