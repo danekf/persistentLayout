@@ -1,0 +1,17 @@
+.monitorsContainer {
+  border-style: solid;
+  border-width: 1px;
+  width: 800px;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.monitor{
+  border-style: solid;
+  border-width: 1px;
+  padding: 20px;
+}
