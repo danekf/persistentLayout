@@ -6,7 +6,7 @@ const Home: React.FC<{}> = () => {
 
   return (
     <div className="banner home">
-      <div className="hello">Home Banner</div>
+      <h1 className="hello">Home Banner</h1>
     </div>
   )
 };
