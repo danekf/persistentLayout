@@ -17,3 +17,8 @@ Home page should load all available layouts in the menu, show the active one/cur
 ### Layout Page
 Layout shows the layout itself and allows editing.
 ![Example Layout Page](../Reference/Notes/LayoutExample.png)
+
+
+### Palette Options
+
+![greys](https://pbs.twimg.com/media/EQBP6VJXUAArPas.png:large)

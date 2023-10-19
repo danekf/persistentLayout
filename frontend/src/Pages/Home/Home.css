@@ -1,3 +1,31 @@
 .home {
-  background-color: bisque;
+  background-color: #778285;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+
+  gap:10px;
+}
+
+.tag {
+
+}
+
+.hook {
+
+}
+
+.description {
+
+}
+
+.closing {
+
+}
+
+.tour {
+  margin-top: 15px;
+  align-self: center;
 }
