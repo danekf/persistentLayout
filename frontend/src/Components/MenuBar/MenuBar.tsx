@@ -1,36 +1,47 @@
 import React from "react";
 import './MenuBar.css';
 
-const MenuBar: React.FC<{}> = () => {
+import { type TLayout } from "../../Types/customTypes.types";
+
+type MenuProps = {
+  layouts: TLayout[];
+  activeLayout: string;  
+}
+
+const MenuBar: React.FC<MenuProps> = ({layouts, activeLayout}) => {
 
 
-  const menuItems = [
-    {link : '/', name: 'Home'},
-    {link: '#Layouts', name: 'Layouts'},
-  ]
+  const menuItems = layouts.map( (layout) => {
+    const link = {
+      link: `/layout/${layout.URLParam}`,
+      name: layout.name,
+      active: false,
+    }
 
-  const BurgerItems = [
-    {},
-    {},
-    {},
-  ]
+    if (activeLayout.toLowerCase() === layout.URLParam.toLowerCase()) {
+      link.active = true;
+    }
+    return link;
+  });
 
-
-
+  menuItems.push({
+    link: '/add',
+    name: 'Add New Layout',
+    active: false,
+  });
 
   return (
     <div className="menuBar">
-      {/* Links */}
-      {menuItems.map( (item) => {
-        return (
-          <a href= {item.link}>{item.name}</a> 
-        )
-      })}
-
-      {/* Burger Menu */}
-      {/* insert here */}
-
-
+      <div className="menuLeft">
+        <a href="/">Sign In / Logo area</a>
+      </div>
+      <div className="menuRight">
+        {menuItems.map( (item) => {
+          return (
+            <a className={item.active === true ? 'activeLayout' : undefined} href= {item.link}>{item.name}</a> 
+          )
+        })}
+      </div>
     </div>
   )
 }

@@ -1,0 +1,29 @@
+.inside {
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+.title {
+  
+}
+
+.monitors {
+
+}
+
+.description {
+
+}
+
+.edit {
+
+}
+
+
+
+.rightSide {
+  align-self: flex-end;
+  margin-left: auto;
+}

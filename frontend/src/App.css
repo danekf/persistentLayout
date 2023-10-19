@@ -1,27 +1,24 @@
 .banner {
-  height: 100px;
   background-color: #0e0e10a8;
+  height: 400px;
   display: flex;
-  justify-content: center;
-}
-.inside {
-  width: 80%;
-}
-
-.loading {
-
+  padding-left: 8%;
+  padding-right: 10%;
+  padding-bottom: 20px;
 }
 
-
-
-
-
-
-
+.fullWidth {
+  width: calc(100vw- (100vw - 100%));
+}
 
 /* Default - to change eventually */
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   text-align: center;
+
 }
 
 .App-logo {

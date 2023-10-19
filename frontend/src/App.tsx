@@ -2,17 +2,32 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import MenuBar from './Components/MenuBar/MenuBar';
-import Home from './Pages/Home/Home';
-import LayoutsList from './Pages/LayoutsList/LayoutsList';
+import SelectionPage from './Pages/SelectionPage/SelectionPage';
+import {Route, Routes, Navigate, } from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
-      <MenuBar />
-      <Home />
-      <LayoutsList />
+      <Routes>
+        {/* Regular Routes */}
+        <Route path='/layout/:activeLayout' element={<SelectionPage />} />
+        <Route path='/add' element={
+          <div className='addNew'>Add new page goes here...eventually. <br/><a href='/'>Go Home</a></div>
+        } />
+
+
+        {/* Redirects */}
+        <Route path='/' element={<Navigate to='/layout/home' />} />
+        <Route path='/layout/' element={<Navigate to='/layout/home' />} />
+        
+        <Route path='*' element={
+          <div className='error'>Page not found <br/><a href='/'>Go Home</a></div>
+        }/>
+
+
+      </Routes>
+
     </div>
   );
 }
