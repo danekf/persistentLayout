@@ -6,7 +6,7 @@
 .menuLeft {
   display: flex;
   justify-content: flex-start;
-  padding-left: 10%;
+  padding-left: 8%;
   background-color: grey;
 
 }
