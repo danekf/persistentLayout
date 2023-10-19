@@ -1,0 +1,21 @@
+.menuBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuLeft {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10%;
+  background-color: grey;
+
+}
+
+.menuRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 20%;
+  gap: 15px;
+  background-color: grey;
+}

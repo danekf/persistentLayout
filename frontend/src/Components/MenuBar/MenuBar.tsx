@@ -9,6 +9,7 @@ type MenuProps = {
 
 const MenuBar: React.FC<MenuProps> = ({layouts}) => {
 
+
   const menuItems = layouts.map( (layout) => {
     return (
       {
@@ -26,12 +27,16 @@ const MenuBar: React.FC<MenuProps> = ({layouts}) => {
 
   return (
     <div className="menuBar">
-      {/* Links */}
-      {menuItems.map( (item) => {
-        return (
-          <a href= {item.link}>{item.name}</a> 
-        )
-      })}
+      <div className="menuLeft">
+        <a href="/">Sign In / Logo area</a>
+      </div>
+      <div className="menuRight">
+        {menuItems.map( (item) => {
+          return (
+            <a href= {item.link}>{item.name}</a> 
+          )
+        })}
+      </div>
     </div>
   )
 }
