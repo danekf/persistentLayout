@@ -9,6 +9,10 @@ type Monitor = {
   use: string;
 }
 
+type MonitorsProps = {
+  layoutName:string;
+}
+
 //TEMP or used for creating new layout...we will see.
 const exampleMonitors: Monitor[] = [
   {
@@ -31,14 +35,15 @@ const exampleMonitors: Monitor[] = [
   }
 ]
 
-/*TODO List
+/*TODO List --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -Size monitor border box according to resolution (make styles?)
 -figure out layout method so that monitors can be in proper grid (probably some kind of grid array? added into the monitors type as well.)
--Figure out import/fetching of monitors. getMonitors hook is most likely with DB.
+-Figure out import/fetching of monitors. getMonitors hook is most likely with DB. This includes figuring out what needs to be passed to this component for getMonitors to work, starting with just a name.
 -edit button to edit layout? 
-*/
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-const Monitors: React.FC<{}> = () => {
+
+const Monitors: React.FC<MonitorsProps> = (layoutName) => {
 
 const monitorsToDisplay = exampleMonitors.map( (monitor)=> {
 
@@ -46,7 +51,7 @@ const monitorsToDisplay = exampleMonitors.map( (monitor)=> {
 const [monitors, setMonitors] = useState([])
 
 useEffect( ()=> {
-  setMonitors( getMonitors() );
+  setMonitors( getMonitors(layoutName) );
 },[])
 */
 
