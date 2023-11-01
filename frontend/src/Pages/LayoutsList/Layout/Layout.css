@@ -3,6 +3,7 @@
   align-items:flex-start;
   flex-direction: column;
   justify-content: space-around;
+  width: 90%;
 
 }
 .title {
@@ -10,7 +11,7 @@
 }
 
 .monitors {
-
+  margin-left: 20%;
 }
 
 .description {

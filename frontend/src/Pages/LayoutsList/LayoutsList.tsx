@@ -17,7 +17,7 @@ const LayoutsList: React.FC<layoutProps> = ({layouts, activeLayout}) => {
       {layouts.map( (layout) => {
         if (activeLayout.toLowerCase() === layout.URLParam.toLowerCase())
         return (
-          <Layout layout={layout} />
+          <Layout key={layout.name} layout={layout} />
         )
       })}
     </div>

@@ -16,7 +16,6 @@ function App() {
           <div className='addNew'>Add new page goes here...eventually. <br/><a href='/'>Go Home</a></div>
         } />
 
-
         {/* Redirects */}
         <Route path='/' element={<Navigate to='/layout/home' />} />
         <Route path='/layout/' element={<Navigate to='/layout/home' />} />
@@ -24,8 +23,6 @@ function App() {
         <Route path='*' element={
           <div className='error'>Page not found <br/><a href='/'>Go Home</a></div>
         }/>
-
-
       </Routes>
 
     </div>
