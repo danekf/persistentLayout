@@ -22,3 +22,13 @@ Layout shows the layout itself and allows editing.
 ### Palette Options
 
 ![greys](https://pbs.twimg.com/media/EQBP6VJXUAArPas.png:large)
+
+
+### Window methods
+
+#### Movement
+https://developer.mozilla.org/en-US/docs/Web/API/Window/moveBy
+https://developer.mozilla.org/en-US/docs/Web/API/Window/moveTo
+
+#### Opening new
+https://www.educative.io/answers/how-to-open-a-link-in-a-new-tab-with-html-and-javascript

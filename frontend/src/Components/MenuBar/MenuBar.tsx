@@ -38,7 +38,7 @@ const MenuBar: React.FC<MenuProps> = ({layouts, activeLayout}) => {
       <div className="menuRight">
         {menuItems.map( (item) => {
           return (
-            <a className={item.active === true ? 'activeLayout' : undefined} href= {item.link}>{item.name}</a> 
+            <a key={item.name} className={item.active === true ? 'activeLayout' : undefined} href= {item.link}>{item.name}</a> 
           )
         })}
       </div>

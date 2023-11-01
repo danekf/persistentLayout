@@ -15,3 +15,8 @@
   border-width: 1px;
   padding: 20px;
 }
+
+.monitor:hover {
+  border-width: 1px;
+  border-color: white;
+}
