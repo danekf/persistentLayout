@@ -22,7 +22,7 @@ const MenuBar: React.FC<MenuProps> = ({layouts, urlParamLayout}) => {
     }
 
     //set colour on menu bar if its the current link.
-    if (urlParamLayout === layout.URLParam.toLowerCase()) {
+    if (urlParamLayout.toLowerCase() === layout.URLParam.toLowerCase()) {
       link.active = true;
     }
     //special colour when a link was the last active. Might not be used but its here for now

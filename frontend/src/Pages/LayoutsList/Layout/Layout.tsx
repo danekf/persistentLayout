@@ -3,7 +3,7 @@ import Monitors from "./Monitors/Monitors";
 import './Layout.css';
 import { type TLayout } from "../../../Types/customTypes.types";
 
-import { currentLayout } from "../../../Signals/currentPages";
+import { updateCurrentLayout } from "../../../Signals/currentPages";
 
 
 type LayoutProps = {
@@ -14,7 +14,7 @@ const Banner: React.FC<LayoutProps> = ({layout}) => {
 
   const applyLayout = () => {
     console.log('Temp message: applying layout');
-    currentLayout.value = layout.name;
+    updateCurrentLayout(layout.name);
   }
 
   return(

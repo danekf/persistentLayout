@@ -5,7 +5,6 @@ import './App.css';
 import SelectionPage from './Pages/SelectionPage/SelectionPage';
 import {Route, Routes, Navigate, } from 'react-router-dom';
 
-
 function App() {
   return (
     <div className="App">
