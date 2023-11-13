@@ -7,28 +7,24 @@ import MenuBar from "../../Components/MenuBar/MenuBar";
 
 import { useParams } from "react-router-dom";
 
-type Layout = {
-  name: string;
-  URLParam: string;
-}
+import { type TLayout } from "../../Types/customTypes.types";
 
 const SelectionPage: React.FC<{}> = () => {
 
-  //TODO - Retrieve layouts based on signed in user data
-  const layouts: Layout[] = [
+  //TEMP/TODO - Retrieve layouts based on signed in user data
+  const layouts: TLayout[] = [
     {name: 'Twitch', URLParam: 'twitch'},
     {name: 'Gaming on TV (Dark Mode)', URLParam:'TVGaming'},
     {name: 'LCS on the side', URLParam:'LCS'},
   ]
 
   const params = useParams();
-  const [activeLayout, setActiveLayout] = useState(params.activeLayout as string);
+  const urlParamLayout = params.layout as string;
 
   return (
     <>
-      <MenuBar layouts={layouts} activeLayout={activeLayout}/> 
-      {activeLayout === 'home' ? <Home /> : null}
-      {activeLayout !== 'home' ? <LayoutsList layouts={layouts} activeLayout={activeLayout}/> : null}
+      <MenuBar layouts={layouts} urlParamLayout = {urlParamLayout}/> 
+      {urlParamLayout === 'home' ? <Home /> : <LayoutsList layouts={layouts} urlParamLayout={urlParamLayout}/> }
     </>
   )
 };

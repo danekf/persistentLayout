@@ -3,12 +3,19 @@ import Monitors from "./Monitors/Monitors";
 import './Layout.css';
 import { type TLayout } from "../../../Types/customTypes.types";
 
+import { currentLayout } from "../../../Signals/currentPages";
+
 
 type LayoutProps = {
   layout: TLayout;
 }
 
-const Banner: React.FC<LayoutProps> = ({layout }) => {
+const Banner: React.FC<LayoutProps> = ({layout}) => {
+
+  const applyLayout = () => {
+    console.log('Temp message: applying layout');
+    currentLayout.value = layout.name;
+  }
 
   return(
     <div className="banner fullWidth">
@@ -19,7 +26,7 @@ const Banner: React.FC<LayoutProps> = ({layout }) => {
         <div className="edit"><button className="edit">Edit Button</button></div>
       </div>
       <div className="rightSide">
-        <button className="apply">Apply Layout.</button>
+        <button className="apply" onClick={applyLayout}>Apply Layout.</button>
       </div>
     </div>
   )

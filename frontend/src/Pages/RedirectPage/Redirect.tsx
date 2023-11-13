@@ -11,8 +11,6 @@ const RedirectPage: React.FC<{}> = () => {
   }
 
   const params = useParams();
-  console.log(params);
-
   return (
   <>
   Redirecting...

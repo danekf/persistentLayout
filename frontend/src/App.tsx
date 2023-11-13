@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Routes>
         {/* Regular Routes */}
-        <Route path='/layout/:activeLayout' element={<SelectionPage />} />
+        <Route path='/layout/:layout' element={<SelectionPage />} />
         <Route path='/add' element={
           <div className='addNew'>Add new page goes here...eventually. <br/><a href='/'>Go Home</a></div>
         } />

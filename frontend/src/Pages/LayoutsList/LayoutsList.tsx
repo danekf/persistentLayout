@@ -6,16 +6,16 @@ import {type TLayout} from "../../Types/customTypes.types";
 
 type layoutProps = {
   layouts: TLayout[];
-  activeLayout: string;  
+  urlParamLayout: string;  
 }
 
 
-const LayoutsList: React.FC<layoutProps> = ({layouts, activeLayout}) => {
+const LayoutsList: React.FC<layoutProps> = ({layouts, urlParamLayout}) => {
   
   return (
     <div className="Layouts" id="Layouts">
       {layouts.map( (layout) => {
-        if (activeLayout.toLowerCase() === layout.URLParam.toLowerCase())
+        if (urlParamLayout.toLowerCase() === layout.URLParam.toLowerCase())
         return (
           <Layout key={layout.name} layout={layout} />
         )
