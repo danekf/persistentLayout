@@ -28,9 +28,15 @@ I decided that I would tackle this problem by attempting to create a website tha
 
 ``It would be nice if :``
 
+* It is able to open the correct amount of windows.
+  * It is able to move those windows to the correct monitor and position.
 * It is able to fullscreen all open windows at the touch of a button (useful when gaming on the TV)
   * If not, can it resize windows automatically and place them somewhere on the screen?
   * This may not be possible as it could be something used by popups to be extremely intrusive and could be blocked.
 * It is able to be remotely controlled via the site being open on another device 
   * Login most likely required, might be a stretch goal once everything works as expected. But might be able to pair with some kind of local code? Could be fun to look into.
 
+
+## Design Links
+
+Figma : 

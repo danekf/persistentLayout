@@ -46,7 +46,8 @@ const MenuBar: React.FC<MenuProps> = ({layouts, urlParamLayout}) => {
   return (
     <div className="menuBar">
       <div className="menuLeft">
-        <a href="/">Sign In / Logo area</a>
+        {/* TODO - Add sign in vs username depending on login info */}
+        <a href="/login">Sign In / Logo area</a>
       </div>
       <div className="menuRight">
         {menuItems.map( (item) => {

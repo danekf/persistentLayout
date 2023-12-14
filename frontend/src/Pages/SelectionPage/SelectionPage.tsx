@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './SelectionPage.css';
 
 import Home from "../Home/Home";
@@ -8,15 +8,12 @@ import MenuBar from "../../Components/MenuBar/MenuBar";
 import { useParams } from "react-router-dom";
 
 import { type TLayout } from "../../Types/customTypes.types";
+import getLayouts from "../../Helpers/getLayouts";
 
 const SelectionPage: React.FC<{}> = () => {
 
   //TEMP/TODO - Retrieve layouts based on signed in user data
-  const layouts: TLayout[] = [
-    {name: 'Twitch', URLParam: 'twitch'},
-    {name: 'Gaming on TV (Dark Mode)', URLParam:'TVGaming'},
-    {name: 'LCS on the side', URLParam:'LCS'},
-  ]
+  const layouts: TLayout[] = getLayouts();
 
   const params = useParams();
   const urlParamLayout = params.layout as string;

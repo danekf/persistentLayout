@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import SelectionPage from './Pages/SelectionPage/SelectionPage';
@@ -14,6 +12,7 @@ function App() {
         <Route path='/add' element={
           <div className='addNew'>Add new page goes here...eventually. <br/><a href='/'>Go Home</a></div>
         } />
+        <Route path='/login'></Route>
 
         {/* Redirects */}
         <Route path='/' element={<Navigate to='/layout/home' />} />

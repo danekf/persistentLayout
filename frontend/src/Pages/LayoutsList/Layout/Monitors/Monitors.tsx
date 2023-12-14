@@ -7,7 +7,7 @@ type Monitor = {
   resolutionWidth:number ;
   resolutionHeight:number ;
   use: string;
-  URL: string | null;
+  URL?: string;
 }
 
 type MonitorsProps = {
@@ -35,7 +35,6 @@ const exampleMonitors: Monitor[] = [
     resolutionWidth: 2560,
     resolutionHeight: 1440,
     use: 'VSCode',
-    URL: null, 
   }
 ]
 
@@ -52,8 +51,29 @@ const openNewWindow = (monitor: Monitor) => {
   /*TODO 
   -open new tab in fullscreen
   -url is embedded into page
-  -Opens 'redirect page in new tab, using tabs.move potentially'
+  -Opens 'redirect page in new tab, using tabs.move potentially?'
   */
+
+  console.log(monitor);
+
+  //window positions are finnicky when opening a new tab and can be annoying. Below is a method to try to automatically get it right.
+  const topPosition = 1;
+  const leftPosition = 0;
+  const offset = -50;
+
+
+ if(monitor.URL){
+  //new window attempts
+  //  window.open(monitor.URL,'monitor1',`toolbar=yes,scrollbars=yes,resizable=yes,top=${topPosition},left=${leftPosition},width=${monitor.resolutionWidth + offset},height=${monitor.resolutionHeight+offset}`)
+  
+  
+
+
+
+  //no offset, attempt to tab.move to somewhere else
+   window.open(monitor.URL, monitor.name)
+ }
+
 }
 
 const Monitors: React.FC<MonitorsProps> = (layoutName) => {

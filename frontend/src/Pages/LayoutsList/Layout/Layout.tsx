@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Monitors from "./Monitors/Monitors";
 import './Layout.css';
 import { type TLayout } from "../../../Types/customTypes.types";
