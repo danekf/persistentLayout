@@ -13,8 +13,10 @@ type LayoutProps = {
 const Banner: React.FC<LayoutProps> = ({layout}) => {
 
   const applyLayout = () => {
-    console.log('Temp message: applying layout');
     updateCurrentLayout(layout.name);
+    
+    console.log('Temp message: applying layout');
+    
   }
 
   return(

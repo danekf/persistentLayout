@@ -1,0 +1,21 @@
+{
+  "name": "persistentlayoutbackend",
+  "version": "1.0.0",
+  "description": "dev backend for persistent layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node ./index.js",
+    "dev": "./node_modules/.bin/nodemon -L --ignore public/"
+  },
+  "author": "Danek Fill",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
