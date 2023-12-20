@@ -1,4 +1,5 @@
 import './App.css';
+import LoginPage from './Pages/Login/LoginPage';
 
 import SelectionPage from './Pages/SelectionPage/SelectionPage';
 import {Route, Routes, Navigate, } from 'react-router-dom';
@@ -12,7 +13,7 @@ function App() {
         <Route path='/add' element={
           <div className='addNew'>Add new page goes here...eventually. <br/><a href='/'>Go Home</a></div>
         } />
-        <Route path='/login'></Route>
+        <Route path='/login' element={<LoginPage />}></Route>
 
         {/* Redirects */}
         <Route path='/' element={<Navigate to='/layout/home' />} />

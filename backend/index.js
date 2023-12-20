@@ -4,7 +4,7 @@ const ENV = require('dotenv').config();
 
 const PORT = process.env.PORT || 8080;
 
-//Database setup
+//Database setup, probably postgres
 const db = 'db here';
 
 
@@ -14,6 +14,8 @@ const server = require('http').Server(app);
 
 //Middleware
 app.use(cors());
+
+app.use(express.json());
 
 
 //Routes defitions

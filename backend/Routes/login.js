@@ -4,6 +4,16 @@ const router = express.Router();
 // const cookieSession = require('cookie-session');
 
 module.exports = (db) => {
+  router.post('/', (req, res) => {
+    const userData = req.body;
+    console.log(`received userData:`, userData);
+
+    res.json({
+      loginTest: true
+    });
+
+  })
+
   // router.get('/', (req, res) => {
   //   // If user already logged in, just send user data
   //   if (req.session.userId) {
